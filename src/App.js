@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState, useEffect } from "react";
+// import { movies } from "./assets/movies";
+import BookData from "./assets/data.json";
+// import { BookData } from "./assets/data.js";
+import { SearchBar } from "./components/SearchBar";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	useEffect(() => {});
+
+	return (
+		<div className="App">
+			<p className="instructions">
+				author:[author name] country:[country name]
+			</p>
+			<div className="search-container">
+				<h2>React Search Bar</h2>
+				<SearchBar data={BookData} />
+			</div>
+		</div>
+	);
 }
 
 export default App;
